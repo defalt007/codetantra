@@ -1,0 +1,22 @@
+#include<stdio.h> 
+
+  int getSum(int n) 
+  {  
+           int sum = 0,temp; 
+              while (n != 0) 
+                 {                      temp= n%10;
+                 if(temp%2!=0)
+                               sum = sum + temp; 
+                                      n = n/10; 
+                 } 
+                    return sum; 
+  } 
+    
+    int main() 
+    { 
+          int n;
+          printf("Enter any positive number: ");
+          scanf("%d",&n);
+            printf("All odd digits sum is: %d\n", getSum(n)); 
+              return 0; 
+    }
