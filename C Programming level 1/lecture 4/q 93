@@ -1,0 +1,23 @@
+#include<stdio.h>
+#include<math.h>
+
+int main()
+{
+                int n,i,j=-14,k=-20,answer=0;
+                printf("Enter the n value : ");
+                scanf("%d",&n);
+                for(i=1;i<=((n+1)/2);i++)
+                {
+                        if(k>0)
+                        printf("+");
+                        answer+=j;
+                        printf("%d",j);
+
+                        j=j+k;
+                        //printf("   %d   ",j);
+                        j*=-1;
+                        k*=-1;
+                }
+                printf(" = %d\n",answer);
+                return 1;
+}
