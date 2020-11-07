@@ -1,0 +1,17 @@
+#include<stdio.h>
+int main()
+{
+        long double f1=-1,f2=1,f3,n,s=0;
+        int i=0;
+        printf("Enter the range: ");
+        scanf("%Lf",&n);
+        while(i<n){
+                f3=f1+f2;
+                f1=f2;
+                f2=f3;
+                s=s+f3;
+                i++;
+        }
+        printf("Sum of Fibonacci series for given range is: %.0Lf\n",s);
+
+}
