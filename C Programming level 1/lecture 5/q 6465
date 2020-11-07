@@ -1,0 +1,10 @@
+int factorial(int n)
+{
+        int temp=1,i;
+        for(i=1;i<=n;i++)
+        {
+                temp*=i;
+        }
+        return temp;
+
+}
