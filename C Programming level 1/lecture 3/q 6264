@@ -1,0 +1,16 @@
+#include<stdio.h>
+void main()
+{
+        int x,sum=0,i;
+        printf("Enter an integer : ");
+        scanf("%d",&x);
+        printf("The sum of digits of the given number %d = ",x);
+        for(;x!=0;)
+        {
+                i=x%10;
+                x/=10;
+                sum+=i;
+        }
+        printf("%d\n",sum);
+
+}
