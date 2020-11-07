@@ -1,0 +1,22 @@
+#include<stdio.h>
+
+void main()
+{
+        int min,max,i=1,j,temp;
+        printf("Enter minimum value: ");
+        scanf("%d",&min);
+        printf("Enter maximum value: ");
+        scanf("%d",&max);
+        printf("Numbers with factorials between %d and %d:",min,max);
+        for(i=1;i<15;i++)
+        {
+                temp=1;
+                for(j=i;j>0;j--)
+                {
+                        temp*=j;
+                }
+        if((temp>=min)&&(temp<=max))
+        printf(" %d",i);
+        }
+        printf("\n");
+}
