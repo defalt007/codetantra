@@ -1,0 +1,29 @@
+#include<stdio.h>
+void main()
+{
+        int x,reverse=0,temp=0,size=0;
+        printf("Enter a 5 digit number : ");
+        scanf("%d",&x);
+        temp=x;
+        for(;temp!=0;){
+                temp/=10;
+                size++;
+        }
+        if(size!=5)
+        {
+                printf("Please enter 5 digit number\n");
+        }
+        else
+        {
+        printf("Reverse number : ");
+        for(;x!=0;)
+        {
+                temp=x%10;
+                reverse+=temp;
+                reverse*=10;
+                x/=10;
+        }
+        reverse/=10;
+        printf("%d\n",reverse);
+        }
+}
