@@ -1,0 +1,28 @@
+#include<stdio.h>
+#include<math.h>
+
+int main()
+{
+
+        int n,i,j;
+        double fact,x,answer=0,temp;
+
+        printf("Enter the value of x : ");
+        scanf("%lf",&x);
+        printf("Enter the value of n : ");
+        scanf("%d",&n);
+        for(i=0;i<=n;i++)
+        {       fact=1;
+                for(j=i;j>0;j--)
+                {
+                        fact*=j;
+                }
+                temp=pow(x,i)/fact;
+                if(i%2!=0)
+                answer= answer - temp;
+                else
+                answer = answer + temp;
+        }
+        printf("Sum of the given series is : %.4lf\n",answer);
+        return 0;
+}
