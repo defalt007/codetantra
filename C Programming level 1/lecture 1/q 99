@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main()
+{
+                int num;
+
+                printf("Enter a number: ");
+                scanf("%d",&num);
+                if(num>=0)
+                {if(num & 1)
+                        printf("Positive odd number\n");
+                else
+                        printf("Positive even number\n");
+                }
+                else
+                {if( num & 1)
+                        printf("Negative odd number\n");
+                else
+                        printf("Negative even number\n");
+                }
+                return(0);
+
+}
