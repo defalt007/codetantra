@@ -1,0 +1,27 @@
+#include <stdio.h>
+int main()
+{
+          int m, n, c, d, matrix[100][100], maximum;float avg=0;
+          
+            printf("Enter the number of rows and columns of matrix: ");
+              scanf("%d%d",&m,&n);
+              
+                printf("Enter the elements of the matrix: ");
+                
+                  for (c = 0; c < m; c++)
+                      for(d = 0; d < n; d++)
+                            scanf("%d", &matrix[c][d]);
+                            
+                              maximum = matrix[0][0];
+                              
+                                for (c = 0; c < m; c++)
+                                    for (d = 0; d < n; d++)  
+                                    {avg=avg+matrix[c][d];
+                                    if(matrix[c][d]>maximum)
+                                    maximum = matrix[c][d];}
+                                    
+                                    
+                                    printf("Maximum element in the matrix is %d\n", maximum);
+                                        printf("Average = %.2f\n",avg/(m*n));
+                                          return 0;
+                                          }
