@@ -1,0 +1,23 @@
+#include<stdio.h>
+int main()
+{
+    int a,b,c,n,x;
+    printf("Enter value of a, b, c separated by spaces : ");
+    scanf("%d %d %d",&a,&b,&c);
+    printf("Enter the value of n : ");
+    scanf("%d",&n);
+ switch(n)
+       {
+                case 1: x=a*c%b; printf("x = %d\n",x);
+        break;
+        case 2: x=a*c*2+b*2; printf("x = %d\n",x);
+        break;
+            case 3: x=a-b*c; printf("x = %d\n",x);
+        break;
+        case 4: x=a+c/b; printf("x = %d\n",x);
+        break;
+        default: printf("Out of range\n");
+        break;
+       }
+       return 0; 
+}
