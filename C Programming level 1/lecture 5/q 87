@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+void factsum(int x)
+{
+                int i,j,f,sum;
+                        for(i=1;i<=x;i++)
+                                {
+                                f=1;
+                         for(j=1;j<=i;j++)
+                                 {
+                                        f=f*j;
+                                         }
+sum=sum+f;
+printf("%d! ",i);
+if(i<x)
+printf("+ ");
+}
+printf("= %d",sum);
+}
+
+
+int main()
+{
+
+            int n;
+                printf("Enter the last number of series: ");
+                scanf("%d",&n);
+                    factsum(n);
+                                return 0;
+}
