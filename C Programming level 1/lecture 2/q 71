@@ -1,0 +1,10 @@
+#include<stdio.h>
+int main()
+{
+        int a,b,c,num;
+        printf("Enter three numbers separated by spaces: ");
+        scanf("%d%d%d",&a,&b,&c);
+        num = (a<b)?(a<c? a:c):(b<c?b:c);
+        printf("The Smallest of the three numbers is: %d\n",num);
+        return 0;
+}
