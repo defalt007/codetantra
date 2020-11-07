@@ -1,0 +1,18 @@
+#include<stdio.h>
+int main()
+{
+        int x=0,y=1,n,i,t;
+        printf("Enter the maximum limit to generate the Fibonacci series : ");
+        scanf("%d",&n);
+        printf("The Fibonacci series is :");
+        for(i=1;i<=n;i++)
+        {
+                if(x<n)
+                {
+                        t=x+y;
+                        printf(" %d",x);
+                        x=y;
+                        y=t;
+                }
+        }
+}
