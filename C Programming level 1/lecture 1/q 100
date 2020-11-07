@@ -1,0 +1,16 @@
+#include<stdio.h>
+
+int main()
+{
+                int x,y,z,a;
+                printf("Enter the values of x, y, z: ");
+                scanf("%d%d%d",&x,&y,&z);
+                a=x;
+                x=y;
+                y=z;
+                z=a;
+                printf("New value of the x = %d\n",x);
+                printf("New value of the y = %d\n",y);
+                printf("New value of the z = %d\n",z);
+                return(0);
+}
