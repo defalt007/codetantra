@@ -1,0 +1,31 @@
+#include<stdio.h>
+int main()
+{
+        int p[10],c[10],m[10],n,i;
+        char name[10][10];
+        printf("Enter number of students: ");
+        scanf("%d",&n);
+        for(i=1;i<=n;i++)
+        {
+                printf("Enter student %d name: ",i);
+                scanf("%s",name[i]);
+                printf("Enter %s marks\n",name[i]);
+                printf("Maths: ");
+                scanf("%d",&m[i]);
+                printf("Physics: ");
+                scanf("%d",&p[i]);
+                printf("Chemistry: ");
+                scanf("%d",&c[i]);
+        }
+        printf("Eligible candidate(s)\n");
+        for(i=1;i<=n;i++)
+        {
+                        if(m[i]>=60){
+                        if(p[i]>=50){
+                        if(c[i]>=40){
+                        if(((m[i]+p[i]+c[i])>=200)||((m[i]+p[i])>=150)){
+                        printf("%s\n",name[i]);}}}}
+        }
+                return 0;
+
+}
