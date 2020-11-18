@@ -1,0 +1,53 @@
+#include<stdio.h>
+#include<stdlib.h>
+struct no
+{
+        int num;
+
+};
+int main()
+{
+        FILE *n,*e,*o;
+        char n1[50];
+        struct no nm;
+        printf("Enter the filename which you want to open(numbers.txt or numbers1.txt): ");
+        scanf("%s",n1);
+        n=fopen(n1,"r");
+        e=fopen("even.txt","w");
+        o=fopen("odd.txt","w");
+        if((n==NULL)||(e==NULL)||(o==NULL))
+        printf("can't open");
+        else
+        {
+                printf("File opened successfully. Reading integers from file. \n");
+                while(fscanf(n,"%d",&nm.num)!=EOF)
+                {
+                        if(nm.num%2==0)
+                        fprintf(o,"%d",nm.num);
+                        else
+                        fprintf(o,"%d",nm.num);
+                }
+                printf("Data written to files successfully.\n");
+                fclose(n);
+                fclose(e);
+                fclose(o);
+                n=fopen(n1,"r");
+                printf("Contents of even.txt:\n");
+                while(fscanf(n,"%d",&nm.num)!=EOF)
+                {
+                        if(nm.num%2==0)
+                        printf("%d\n",nm.num);
+                }
+                fclose(n);
+                n=fopen(n1,"r");
+                printf("Contents of odd.txt:\n");
+                while(fscanf(n,"%d",&nm.num)!=EOF)
+                {
+                        if((nm.num%2)!=0)
+                        {
+                                printf("%d\n",nm.num);
+                        }
+                }
+        }
+        return 0;
+}
