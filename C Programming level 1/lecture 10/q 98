@@ -1,0 +1,17 @@
+#include<stdio.h>
+#include<stdlib.h>
+int main(int argc,char *argv[])
+{
+        int a=-1,b=1,c,n,i;
+        n=atoi(argv[1]);
+        printf("Printing first %d fibonacci nos. -> ",n);
+        for(i=1;i<=n;i++)
+        {
+                c=a+b;
+                printf("%d ",c);
+                a=b;
+                b=c;
+        }
+        printf("\n");
+        return 0;
+}
