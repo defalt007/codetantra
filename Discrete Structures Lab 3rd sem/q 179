@@ -1,0 +1,28 @@
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+        char a[10];
+        int i,j,n,m,k;
+        printf("Enter no of characters: ");
+        scanf("%d",&n);
+        m=pow(2,n);
+        printf("Enter the characters: ");
+        for(i=0;i<n;i++)
+        {
+                scanf("%s",&a[i]);
+
+        }
+        printf("char is\n");
+        for(i=1;i<m;i++)
+        {
+                for(j=0;j<n;j++)
+                {
+                        k=pow(2,j);
+                        if(i&k)
+                        printf("%c",a[j]);
+                }
+                printf("\n");
+        }
+        return 0;
+}
