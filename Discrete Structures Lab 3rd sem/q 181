@@ -1,0 +1,44 @@
+#include<stdio.h>
+int main()
+{
+        int i,j,k=0,n,m,a[30],b[30],c[30],flag;
+        printf("Enter size of first array: ");
+        scanf("%d",&n);
+        printf("Enter %d elements of first array: ",n);
+        for(i=0;i<n;i++)
+        {
+                scanf("%d",&a[i]);
+        }
+        printf("Enter size of second array: ");
+        scanf("%d",&m);
+        printf("Enter %d elements of second array: ",m);
+        for(j=0;j<m;j++)
+        {
+                scanf("%d",&b[j]);
+        }
+        for(i=0;i<n;i++)
+        {
+                flag=0;
+                for(j=0;j<m;j++)
+                {
+                        if(a[i]==b[j])
+                        {
+                                flag=1;
+                                break;
+                        }
+                }
+                if(flag==0)
+                {
+                        c[k]=a[i];
+                        k++;
+                }
+        }
+        printf("The difference of the two array is: {");
+        for(i=0;i<k;i++)
+        {
+                printf(" %d",c[i]);
+
+        }
+        printf(" }\n");
+        return 0;
+}
