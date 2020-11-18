@@ -1,0 +1,28 @@
+#include<stdio.h>
+int main()
+{
+        FILE *f1,*f2;
+        char c, file1[50], file2[50];
+        int l=0;
+        printf("Enter the filename to open for reading(a.txt or a1.txt): \n");
+        scanf("%s",&file1);
+        printf("Enter the filename to open for writing(b.txt or b1.txt): \n");
+        scanf("%s",&file2);
+        f1 = fopen(file1,"r");
+        f2 = fopen(file2,"w");
+        c = fgetc(f1);
+        while(c != EOF)
+        {
+                fputc(c,f2);
+                printf("%c",c);
+                l++;
+                c= fgetc(f1);
+
+        }
+        printf("\n");
+        printf("Content copied to %s\n",file2);
+        printf("The number of characters in the  file %s are : %d\n",file2,l);
+        fclose(f1);
+        fclose(f2);
+        return 0;
+}
