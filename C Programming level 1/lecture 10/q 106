@@ -1,0 +1,22 @@
+#include<stdio.h>
+#include<stdlib.h>
+int main()
+{
+        int a[50],i,j,n;
+        float *p;
+        printf("Enter the total number of elements: ");
+        scanf("%d",&n);
+        p=(float*)malloc(n*sizeof(float));
+        for(i=0;i<n;i++)
+        {
+                printf("Enter Number %d: ",i+1);
+                scanf("%f",(p+i));
+        }
+        for(i=1;i<n;i++)
+        {
+                if(*p<*(p+i))
+                *p=*(p+i);
+        }
+        printf("Largest number: %0.2f\n",*p);
+        return 0;
+}
