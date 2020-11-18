@@ -1,0 +1,39 @@
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+        struct hotel{
+                char name[30];
+                char city[30];
+                int grade;
+                int charge;
+                int room;
+        };
+        int i,n,g;
+        struct hotel h[30];
+        printf("Enter no. of hotels: ");
+        scanf("%d",&n);
+        for(i=0;i<n;i++)
+        {
+                printf("Enter name of hotel: ");
+                scanf("%s",&h[i].name);
+                printf("Enter name of city: ");
+                scanf("%s",&h[i].city);
+                printf("Enter the grade: ");
+                scanf("%d",&h[i].grade);
+                printf("Enter room charge: ");
+                scanf("%d",&h[i].charge);
+                printf("Enter no. of rooms: ");
+                scanf("%d",&h[i].room);
+        }
+        printf("Enter a grade to print the hotels: ");
+        scanf("%d",&g);
+        printf("Hotelname\tcity\t\tgrade\t\troomcharge\tno of room: \n");
+        for(i=0;i<n;i++)
+        {
+                if(h[i].grade==g)
+                printf("%s\t\t%s \t\t%d \t\t%d\t\t%d\n",h[i].name, h[i].city, h[i].grade, h[i].charge, h[i].room);
+
+        }
+        return 0;
+}
