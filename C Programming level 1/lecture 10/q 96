@@ -1,0 +1,13 @@
+#include<stdio.h>
+#include<stdlib.h>
+int main(int argc,char *argv[])
+{
+        int num,f=1;
+        num=atoi(argv[1]);
+        for(int i=num;i>=1;i--)
+        {
+                f=f*i;
+        }
+        printf("%d\n",f);
+        return 0;
+}
