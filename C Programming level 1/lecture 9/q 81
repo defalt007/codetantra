@@ -1,0 +1,26 @@
+#include<stdio.h>
+#include<string.h>
+struct cricket
+{
+        char p_name[20];
+        char t_name[20];
+        float b_ave;
+
+};
+int main()
+{
+        struct cricket s[5];
+        int i;
+        printf("Enter Data Of 5 Player: \n");
+        for(i=0;i<5;i++)
+        {
+                printf("Enter Player Name,Team Name And Bating Average For Player %d : ",i+1);
+                scanf("%s%s%f",&s[i].p_name,&s[i].t_name,&s[i].b_ave);
+        }
+        printf("After Teamwise Sorting Player List Is: \n");
+        for(i=0;i<5;i++)
+        {
+                printf("%-11s%-11s%.2f\n",s[i].p_name,s[i].t_name,s[i].b_ave);
+        }
+        return 0;
+}
