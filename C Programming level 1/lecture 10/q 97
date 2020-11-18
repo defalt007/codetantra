@@ -1,0 +1,15 @@
+#include<stdio.h>
+#include<stdlib.h>
+int main(int argc,char *argv[])
+{
+        int num,d,sum=0;
+        num=atoi(argv[1]);
+        while(num!=0)
+        {
+                d=num%10;
+                sum=sum+d;
+                num=num/10;
+        }
+        printf("Sum of the digits of %d = %d\n",atoi(argv[1]),sum);
+        return 0;
+}
