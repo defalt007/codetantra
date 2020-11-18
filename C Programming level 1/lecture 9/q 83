@@ -1,0 +1,32 @@
+#include<stdio.h>
+#include<stdlib.h>
+struct s{
+        int n;
+        };
+int main()
+{
+        int i=1;
+        char n1[30], n2[30];
+        FILE *p, *q;
+        struct s t;
+        printf("Enter the filename to open for reading(numbers.txt or numbers1.txt): ");
+        scanf("%s" ,&n1);
+        p = fopen(n1,"r");
+        q = fopen("square.txt","w");
+        printf("Contents copied to %s\n",n1);
+        printf("Contents of square.txt: \n");
+        while(i<=10)
+
+        {
+                fscanf(p,"%d",&t.n);
+                t.n=(t.n)*(t.n);
+                fprintf(q,"%d\n",t.n);
+                i++;
+        }
+        fclose(p);
+        fclose(q);
+        q=fopen("square.txt","r");
+        while(fscanf(q,"%d",&t.n)!=EOF)
+        printf("%d\n",t.n);
+        return 0;
+}
