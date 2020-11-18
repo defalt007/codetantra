@@ -1,0 +1,27 @@
+#include<stdio.h>
+int main()
+{
+        int a[50],b[50],c[50],i,s1,s2,j;
+        printf("Enter no of elements in the array1 : ");
+        scanf("%d",&s1);
+        for(i=0;i<s1;i++)
+        {
+                printf("element - %d : ",i);
+                scanf("%d",&a[i]);
+        }
+        printf("Enter no of elements in the array2 : ");
+        scanf("%d",&s2);
+        for(i=0;i<s2;i++)
+        {
+                printf("element - %d : ",i);
+                scanf("%d",&b[i]);
+        }
+        for(i=0;i<s1;i++)
+        {
+                for(j=0;j<s2;j++)
+                {
+                        printf("{%d, %d}",a[i],b[j]);
+                        printf(", ");
+                }
+        }
+}
