@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+
+
+#define str_size 100 
+void main()
+{
+            char str[str_size];
+                int alp, digit, splch, i;
+                    alp = digit = splch = i = 0;
+                    printf("Enter any string: ");
+                    fgets(str, sizeof str, stdin);
+                    while(str[i]!='\0')
+                    {
+                    alp++;
+                    i++;
+                    }                           
+ printf("Number of characters in string : %d\n",--alp);
+}
