@@ -1,0 +1,40 @@
+#include<stdio.h>
+#include<conio.h>
+int main()
+{
+        int a[10],b[10],m,n,i,p=0,q=0;
+        printf("Enter size of first array: ");
+        scanf("%d",&m);
+        printf("Enter elements of first array: ");
+        for(i=0;i<m;i++)
+        {
+                scanf("%d",&a[i]);
+
+        }
+        printf("Enter size of second array: ");
+        scanf("%d",&n);
+        printf("Enter elements of second array: ");
+        for(i=0;i<n;i++)
+        {
+                scanf("%d",&b[i]);
+        }
+        printf("Intersection of two arrays:");
+        while(p<=m&&q<=n)
+        {
+                if(a[p]<b[q])
+                {
+                        p++;
+                }
+                else if(b[q]<a[p])
+                {
+                        q++;
+                }
+                else if(a[p]==b[q])
+                {
+                        printf( " %d",a[p]);
+                        p++;
+                        q++;
+                }
+        }
+        printf("\n");
+}
