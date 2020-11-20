@@ -5,23 +5,23 @@ void main() {
         printf("Enter the row & column sizes of matrix-1 : ");
         scanf("%d %d", &m, &n);
         printf("Enter matrix-1 %d elements : ", m*n);
-        for (i=0;i<m;i++) { // Complete the code in for
-                for (j=0;j<n;j++) { // Complete the code in for
+        for (i=0;i<m;i++) { 
+                for (j=0;j<n;j++) { 
                         scanf("%d", &a[i][j]);
                 }
-        //  printf("\n");
+   
         }
         printf("Enter the row & column sizes of matrix-2 : ");
         scanf("%d %d", &p, &q);
         printf("Enter matrix-2 %d elements : ", p*q);
-        for (i=0;i<p;i++) { // Complete the code in for
-                for (j=0;j<q;j++) { // Complete the code in for
+        for (i=0;i<p;i++) { 
+                for (j=0;j<q;j++) { 
                         scanf("%d", &b[i][j]);
                 }
-                //printf("\n");
+         
         }
         printf("The given matrix-1 is\n");
-        // Write the code to display Matrix-1 elements
+       
         for(i=0;i<m;i++){
                 for(j=0;j<n;j++)
                   printf("%d ",a[i][j]);
@@ -29,21 +29,21 @@ void main() {
                   printf("\n");
         }
         printf("The given matrix-2 is\n");
-        // Write the code to display Matrix-2 elements
+       
         for(i=0;i<p;i++){
                 for(j=0;j<q;j++)
                   printf("%d ",b[i][j]);
                   
                   printf("\n");
         }
-        if (m*n==p*q) { // Write the condition part
-                for (i=0;i<m;i++) { // Complete the code in for
-                        for (j=0;j<n;j++) { // Complete the code in for
-                                c[i][j] = a[i][j]+b[i][j] ; // Complete the statement
+        if (m*n==p*q) { 
+                for (i=0;i<m;i++) {
+                        for (j=0;j<n;j++) { 
+                                c[i][j] = a[i][j]+b[i][j] ; 
                         }
                 }
                 printf("Addition of two matrices is\n");
-                // Write the code to display resultant matrix elements
+              
                 for(i=0;i<m;i++){
                         for(j=0;j<n;j++)
                           printf("%d ",c[i][j]);
