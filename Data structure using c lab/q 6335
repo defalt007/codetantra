@@ -1,0 +1,65 @@
+#include<stdio.h>
+void main() {
+        int i, j, k, m, n, p, q;
+        int a[5][5], b[5][5], c[5][5];
+        printf("Enter the row & column sizes of matrix-1 : ");
+        scanf("%d %d", &m, &n);
+        printf("Enter matrix-1 %d elements : ", m*n);
+        for (i=0; i<m; i++) { // Complete the code in for
+                for (j=0; j<n; j++) { // Complete the code in for
+                        scanf("%d", &a[i][j]);
+                }
+        }
+        printf("Enter the row & column sizes of matrix-2 : ");
+        scanf("%d %d", &p, &q);
+        printf("Enter matrix-2 %d elements : ", p*q);
+        for (i=0; i<p; i++) { // Complete the code in for
+                for (j=0; j<q; j++) { // Complete the code in for
+                        scanf("%d", &b[i][j]);
+                }
+        }
+        printf("The given matrix-1 is\n");
+        // Write the code to display Matrix-1 elements
+     for(i=0;i<m;i++){
+     
+        for(j=0;j<n;j++){
+                printf("%d ",a[i][j]);
+        }
+         printf("\n");
+     }
+
+
+        printf("The given matrix-2 is\n");
+        // Write the code to display Matrix-2 elements
+        for(i=0;i<p;i++){
+
+                for(j=0;j<q;j++){
+                        printf("%d ",b[i][j]);
+                }
+             printf("\n");
+        }
+
+
+        if (n==p ) { // Write the condition part
+                for (i=0; i<m; i++) { // Complete the code in for
+                        for (j=0; j<q; j++) { // Complete the code in for
+                                c[i][j] =0 ; // Complete the statement
+                                for (k=0; k<p; k++) { // Complete the code in for
+                                        c[i][j] = c[i][j]+ a[i][k]*b[k][j] ;// Complete the statement
+                                }
+                        }
+                }
+                printf("Multiplication of two matrices is\n");
+                // Write the code to display resultant matrix elements
+                for(i=0; i<m;i++){
+                        for(j=0; j<q;j++){
+                                printf("%d ",c[i][j]);
+                        }
+                     printf("\n");
+                }
+
+
+        } else {
+                printf("Multiplication is not possible\n");
+        }
+}
