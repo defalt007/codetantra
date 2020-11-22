@@ -1,0 +1,8 @@
+long int factorial(long int n)
+{ 
+        long int i=1;
+        if(n==0)
+        return i;
+        i=i*n;
+        return n*(factorial (n-1));
+}
