@@ -3,7 +3,7 @@ void main() {
         int a[20], i, n, j, temp;
         printf("Enter value of n : ");
         scanf("%d", &n);
-        // Write the for loop to read array elements
+       
         for(i=0;i<n;i++)
         {
                 printf("Enter element for a[%d] : ",i);
@@ -11,13 +11,13 @@ void main() {
         }
 
         printf("Before sorting the elements in the array are\n");
-        // Write the for loop to display array elements before sorting
+        
         for(i=0;i<n;i++)
         {
                 printf("Value of a[%d] = %d\n",i,a[i]);
         }
 
-        //Write the code to sort elements
+        
         for(i=n-2;i>=0;i--)
         {
                 for(j=0;j<=i;j++)
@@ -32,7 +32,7 @@ void main() {
         }
 
         printf("After sorting the elements in the array are\n");
-        // Write the for loop to display array elements after sorting
+       
         for(i=0;i<n;i++)
         {
                 printf("Value of a[%d] = %d\n",i,a[i]);
