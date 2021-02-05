@@ -15,7 +15,7 @@ void main() {
                 printf("%d\t",arr[j]);
         }
         printf("\n");
-        // fill the code to delete an element from the specified position in the array.
+       
         N--;
         for(j=pos;j<=N;j++)
         {
@@ -24,7 +24,7 @@ void main() {
 
         printf("After deletion: ");
         for (j = 0; j < N; j++) {
-                printf("%d\t",arr[j]);ff
+                printf("%d\t",arr[j]);
         }
         printf("\n");
 }
