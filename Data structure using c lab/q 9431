@@ -1,0 +1,8 @@
+#include<stdio.h>struct node {        int data;        struct node *next;};struct node *top=NULL;struct node *createlist(){        struct node *n;        n=(struct node *)malloc(sizeof(struct node));        return n;}void push(int x){        struct node *ptr,*t;        ptr= createlist();        ptr->data=x;        if(ptr==NULL)        {                printf("Overflow\n");        }        else if(top==NULL)        {                ptr->next=NULL;                top=ptr;        }        else        {                ptr->next=top;                top=ptr;        }        printf("Successfully pushed.\n");}void pop(){        struct node *temp;        if(top==NULL)        {                printf("Stack is underflow.\n");        }        else        {                temp=top;                printf("Popped value = %d\n",top->data);                top=to
+p->next;                free(temp);        }}void display(){        struct node *t;        if(top==NULL)        {       
+         printf("Stack is empty.\n");        }        else        {                printf("Elements of the stack are : "
+);                t=top;                while(t!=NULL)                {                        printf("%d ",t->data);   
+                     t=t->next;                }                printf("\n");        }}void isEmpty(){        if(top==NU
+LL)        {                printf("Stack is empty.\n");        }        else        {                printf("Stack is n
+ot empty.\n");        }}void peek(){        if(top==NULL)        {                printf("Stack is underflow.\n");      
+  }        else        {                printf("Peek value = %d\n",top->data);        }}
